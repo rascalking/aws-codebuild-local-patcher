@@ -6,6 +6,7 @@ Builds a patched `amazon/aws-codebuild-local` image, and a patched
 Assumptions:
 * python3 with virtualenv and pip
 * sudoless access to docker
+* wget
 
 
 ```

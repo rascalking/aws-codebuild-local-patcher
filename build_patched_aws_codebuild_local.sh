@@ -2,7 +2,7 @@
 
 set -e
 
-virtualenv venv
+virtualenv -p $(which python3) venv
 pip install -r requirements.txt
 ./extract_file_from_image.py
 chmod a+x ./local_build.sh
