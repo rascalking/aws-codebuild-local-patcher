@@ -1,0 +1,11 @@
+--- codebuild_build.sh	2018-09-10 12:22:01.000000000 -0400
++++ patched_codebuild_build.sh	2018-09-10 12:22:36.000000000 -0400
+@@ -93,7 +93,7 @@ then
+     docker_command+="$(env | grep ^AWS_ | while read -r line; do echo " -e \"$line\""; done )"
+ fi
+ 
+-docker_command+=" amazon/aws-codebuild-local:latest"
++docker_command+=" aws-codebuild-local:bugfix"
+ 
+ # Note we do not expose the AWS_SECRET_ACCESS_KEY or the AWS_SESSION_TOKEN
+ exposed_command=$docker_command
