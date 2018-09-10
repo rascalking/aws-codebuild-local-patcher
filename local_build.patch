@@ -1,0 +1,11 @@
+--- local_build.sh	2018-09-10 11:39:16.000000000 -0400
++++ manual_local_build.sh	2018-09-07 13:55:25.000000000 -0400
+@@ -1,5 +1,8 @@
+ #!/bin/sh
+ 
++# work around https://github.com/aws/aws-codebuild-docker-images/issues/73
++sleep 10
++
+ cd /LocalBuild/agent-resources
+ 
+ if [ $IS_INNER_CONTAINER == true ]
